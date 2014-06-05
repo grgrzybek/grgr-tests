@@ -80,7 +80,9 @@
                         <Bundle-Activator>grgr.test.dsig.Activator</Bundle-Activator>
                         <Import-Package>
                             javax.xml.crypto.dsig,
-                            org.osgi.framework
+                            org.osgi.framework,
+                            org.apache.xml.security,
+                            org.apache.jcp.xml.dsig.internal.dom
                         </Import-Package>
                         <Export-Package />
                     </instructions>
@@ -147,6 +149,14 @@
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi.core</artifactId>
             <version>4.3.1</version>
+        </dependency>
+
+        <!-- Other -->
+
+        <dependency>
+            <groupId>org.apache.santuario</groupId>
+            <artifactId>xmlsec</artifactId>
+            <version>1.5.6</version>
         </dependency>
 
     </dependencies>
